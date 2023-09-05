@@ -29,6 +29,8 @@ Develop the following features in the most generic way to easily scale to variou
 
 ## Get Started
 
+/!\ It is highly recommended for Windows user to use WSL system: https://learn.microsoft.com/fr-fr/windows/wsl/install
+
 ### Installation Steps
 
 1. **Clone the Repository**:
@@ -100,11 +102,14 @@ Develop the following features in the most generic way to easily scale to variou
         # Initialize Airflow Database
         airflow db init
 
-        # Run Scheduler
+        # Run Scheduler (in dedicated terminal)
         airflow scheduler &
 
-        # Run Webserver
+        # Run Webserver (in dedicated terminal)
         airflow webserver -p 8080 &
+
+        # Create user
+        airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
     ```
   
 7. **Launch Streamlit Application**:
